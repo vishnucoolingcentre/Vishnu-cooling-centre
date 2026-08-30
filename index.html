@@ -1,343 +1,1423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Vishnu Cooling Centre | AC Service in Unnao</title>
+<title>Vishnu Cooling Centre | AC Service in Unnao</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+<meta name="description"
+content="Vishnu Cooling Centre - Professional AC repair, service, installation and maintenance in PD Nagar, Unnao, Uttar Pradesh.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7fbff;
+    color:#172b45;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#fff;
+    box-shadow:0 3px 18px rgba(0,0,0,.08);
+}
+
+.navbar{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+}
+
+.logo-name{
+    font-size:18px;
+    font-weight:800;
+    color:#073c78;
+}
+
+.logo-name span{
+    display:block;
+    font-size:10px;
+    color:#159bd7;
+    letter-spacing:1.5px;
+    margin-top:2px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#19324f;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-links a:hover{
+    color:#087ac1;
+}
+
+.header-call{
+    background:#ef5b4d;
+    color:#fff !important;
+    padding:12px 19px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(90deg,
+    rgba(4,35,69,.92) 0%,
+    rgba(4,35,69,.78) 45%,
+    rgba(4,35,69,.18) 100%),
+    url("hero.png");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:650px;
+    color:#fff;
+    padding:70px 0;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid rgba(255,255,255,.4);
+    background:rgba(255,255,255,.12);
+    border-radius:50px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#48c5ff;
+}
+
+.hero p{
+    font-size:18px;
+    color:#edf7ff;
+    max-width:590px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 24px;
+    border-radius:7px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:#ef5b4d;
+    color:#fff;
+}
+
+.btn-secondary{
+    background:#fff;
+    color:#073c78;
+}
+
+/* ================= TRUST ================= */
+
+.trust{
+    background:#fff;
+    padding:25px 0;
+    box-shadow:0 3px 15px rgba(0,0,0,.04);
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+}
+
+.trust-box{
+    padding:8px 15px;
+    border-right:1px solid #e5edf4;
+}
+
+.trust-box:last-child{
+    border-right:none;
+}
+
+.trust-box strong{
+    display:block;
+    font-size:24px;
+    color:#073c78;
+}
+
+.trust-box span{
+    font-size:13px;
+    color:#687789;
+}
+
+/* ================= COMMON ================= */
+
+section{
+    padding:80px 0;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 45px;
+}
+
+.section-heading small{
+    color:#ef5b4d;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.section-heading h2{
+    font-size:38px;
+    line-height:1.2;
+    color:#12365b;
+    margin:7px 0 12px;
+}
+
+.section-heading p{
+    color:#687789;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    width:100%;
+    height:470px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,52,100,.15);
+}
+
+.about-text h2{
+    font-size:38px;
+    color:#12365b;
+    line-height:1.2;
+    margin-bottom:16px;
+}
+
+.about-text p{
+    color:#687789;
+    margin-bottom:16px;
+}
+
+.check-list{
+    list-style:none;
+    margin:22px 0;
+}
+
+.check-list li{
+    margin:11px 0;
+    font-weight:700;
+    color:#28445f;
+}
+
+.check-list li::before{
+    content:"✓";
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:24px;
+    height:24px;
+    background:#e8f7ff;
+    color:#087ac1;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#edf7ff;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 7px 25px rgba(0,60,110,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 14px 30px rgba(0,60,110,.14);
+}
+
+.service-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.service-content{
+    padding:22px;
+}
+
+.service-content h3{
+    color:#12365b;
+    font-size:20px;
+    margin-bottom:7px;
+}
+
+.service-content p{
+    color:#687789;
+    font-size:14px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:linear-gradient(110deg,#073c78,#087fc5);
+    color:#fff;
+}
+
+.cta-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.cta-box h2{
+    font-size:35px;
+    line-height:1.2;
+    margin-bottom:8px;
+}
+
+.cta-box p{
+    color:#e5f5ff;
+}
+
+.cta .btn{
+    background:#fff;
+    color:#073c78;
+    white-space:nowrap;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:14px;
+    background:#fff;
+}
+
+.gallery-item img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+/* ================= WHY US ================= */
+
+.why{
+    background:#f0f8ff;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    background:#fff;
+    text-align:center;
+    padding:30px 20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,60,100,.07);
+}
+
+.why-icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.why-card h3{
+    color:#12365b;
+    margin-bottom:8px;
+}
+
+.why-card p{
+    font-size:14px;
+    color:#687789;
+}
+
+/* ================= REVIEWS ================= */
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review-card{
+    background:#fff;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 5px 22px rgba(0,60,100,.07);
+}
+
+.stars{
+    color:#f5a623;
+    font-size:19px;
+    margin-bottom:10px;
+}
+
+.review-card p{
+    color:#687789;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.review-card strong{
+    color:#12365b;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#edf7ff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-card{
+    background:#fff;
+    padding:32px;
+    border-radius:16px;
+    box-shadow:0 6px 25px rgba(0,60,100,.07);
+}
+
+.contact-card h3{
+    font-size:27px;
+    color:#12365b;
+    margin-bottom:20px;
+}
+
+.contact-info{
+    margin-bottom:20px;
+}
+
+.contact-info strong{
+    display:block;
+    color:#12365b;
+    margin-bottom:3px;
+}
+
+.contact-info span{
+    color:#687789;
+}
+
+.contact-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:25px;
+}
+
+.call-btn{
+    background:#0c7a48;
+    color:#fff;
+}
+
+.whatsapp-btn{
+    background:#25d366;
+    color:#fff;
+}
+
+.map{
+    width:100%;
+    height:380px;
+    border:0;
+    border-radius:16px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#062944;
+    color:#fff;
+    padding:55px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.footer-logo img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:8px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#c9d9e6;
+    font-size:14px;
+}
+
+.footer-links a{
+    display:block;
+    margin:8px 0;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.15);
+    margin-top:35px;
+    padding-top:18px;
+    font-size:13px;
+    color:#aebfcd;
+}
+
+/* ================= MOBILE BAR ================= */
+
+.mobile-bar{
+    display:none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
     }
 
-    body {
-      background: #f5fbff;
-      color: #123;
-      line-height: 1.6;
+    .header-call{
+        padding:10px 14px;
+        font-size:13px;
     }
 
-    header {
-      background: #0066cc;
-      color: white;
-      padding: 15px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    .hero{
+        min-height:600px;
+        background-position:center;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
+    .hero h1{
+        font-size:40px;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
+    .hero p{
+        font-size:16px;
     }
 
-    .hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #e8f7ff, #ffffff);
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .hero h1 {
-      font-size: 48px;
-      color: #005bbb;
-      margin-bottom: 15px;
+    .trust-box{
+        border-right:none;
+        border-bottom:1px solid #e5edf4;
+        padding:15px;
     }
 
-    .hero h2 {
-      font-size: 25px;
-      margin-bottom: 15px;
+    .about{
+        grid-template-columns:1fr;
+        gap:35px;
     }
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #555;
-      font-size: 18px;
+    .about-image img{
+        height:350px;
     }
 
-    .buttons {
-      margin-top: 30px;
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .btn {
-      display: inline-block;
-      padding: 13px 25px;
-      margin: 7px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .call {
-      background: #0066cc;
-      color: white;
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .whatsapp {
-      background: #25d366;
-      color: white;
+    .review-grid{
+        grid-template-columns:1fr;
     }
 
-    section {
-      padding: 65px 7%;
+    .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 32px;
-      color: #005bbb;
-      margin-bottom: 35px;
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:60px 0;
     }
 
-    .service {
-      background: white;
-      padding: 30px 20px;
-      text-align: center;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    .container{
+        width:91%;
     }
 
-    .service .icon {
-      font-size: 45px;
-      margin-bottom: 15px;
+    .logo img{
+        width:50px;
+        height:50px;
     }
 
-    .service h3 {
-      color: #005bbb;
-      margin-bottom: 10px;
+    .logo-name{
+        font-size:15px;
     }
 
-    .about {
-      background: white;
-      text-align: center;
+    .header-call{
+        font-size:12px;
+        padding:9px 11px;
     }
 
-    .about p {
-      max-width: 750px;
-      margin: auto;
-      color: #555;
-      font-size: 17px;
+    .hero{
+        min-height:650px;
     }
 
-    .contact {
-      text-align: center;
-      background: #e8f7ff;
+    .hero-content{
+        padding:60px 0 90px;
     }
 
-    .contact-box {
-      max-width: 600px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    .hero h1{
+        font-size:36px;
     }
 
-    .contact-box p {
-      margin: 10px 0;
-      font-size: 17px;
+    .hero p{
+        font-size:15px;
     }
 
-    footer {
-      background: #003b73;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
+    .btn{
+        padding:13px 18px;
+        font-size:14px;
     }
 
-    footer p {
-      margin: 5px;
+    .section-heading h2,
+    .about-text h2{
+        font-size:30px;
     }
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav a {
-        margin: 0 7px;
-        font-size: 14px;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero h2 {
-        font-size: 21px;
-      }
-
-      section {
-        padding: 50px 5%;
-      }
+    .service-grid{
+        grid-template-columns:1fr;
     }
-  </style>
+
+    .service-card img{
+        height:230px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .gallery-item img{
+        height:170px;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .why-card{
+        padding:22px 12px;
+    }
+
+    .why-card h3{
+        font-size:16px;
+    }
+
+    .why-card p{
+        font-size:12px;
+    }
+
+    .cta-box h2{
+        font-size:28px;
+    }
+
+    .contact-card{
+        padding:24px;
+    }
+
+    .map{
+        height:300px;
+    }
+
+    .mobile-bar{
+        display:grid;
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index:2000;
+        grid-template-columns:1fr 1fr;
+        box-shadow:0 -3px 15px rgba(0,0,0,.15);
+    }
+
+    .mobile-bar a{
+        color:#fff;
+        text-align:center;
+        padding:14px 8px;
+        font-weight:800;
+        font-size:15px;
+    }
+
+    .mobile-call{
+        background:#087a48;
+    }
+
+    .mobile-whatsapp{
+        background:#25d366;
+    }
+
+    footer{
+        padding-bottom:80px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">❄️ Vishnu Cooling Centre</div>
+<!-- ================= HEADER ================= -->
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+<header>
+<div class="container navbar">
+
+    <a href="#home" class="logo">
+        <img src="logo.png" alt="Vishnu Cooling Centre Logo">
+
+        <div class="logo-name">
+            Vishnu Cooling Centre
+            <span>AC SERVICE EXPERTS</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
+
+    <a href="tel:+91XXXXXXXXXX" class="header-call">
+        📞 Call Now
+    </a>
+
+</div>
+</header>
 
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div>
-      <h1>Vishnu Cooling Centre</h1>
+<!-- ================= HERO ================= -->
 
-      <h2>Professional AC Service in Unnao</h2>
+<section class="hero" id="home">
 
-      <p>
-        Reliable and professional air conditioning services for your home,
-        office and commercial spaces. Get quality AC service from Vishnu
-        Cooling Centre.
-      </p>
+<div class="container hero-content">
 
-      <div class="buttons">
-        <!-- Apna phone number yahan lagaye -->
-        <a class="btn call" href="tel:+919260991613">
-          📞 Call Now
-        </a>
-
-        <!-- Apna WhatsApp number yahan lagaye -->
-        <a class="btn whatsapp"
-           href="https://wa.me/91XXXXXXXXXX"
-           target="_blank">
-          💬 WhatsApp
-        </a>
-      </div>
+    <div class="hero-badge">
+        ❄️ Professional AC Service in Unnao
     </div>
-  </section>
 
-
-  <!-- Services -->
-  <section id="services">
-    <h2 class="section-title">Our Services</h2>
-
-    <div class="services">
-
-      <div class="service">
-        <div class="icon">❄️</div>
-        <h3>AC Service</h3>
-        <p>
-          Professional AC servicing to keep your air conditioner
-          clean and efficient.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="icon">🔧</div>
-        <h3>AC Repair</h3>
-        <p>
-          Reliable AC repair service for common cooling and
-          performance problems.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="icon">⚙️</div>
-        <h3>AC Installation</h3>
-        <p>
-          Proper installation service for split and other types
-          of air conditioners.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="icon">🛠️</div>
-        <h3>AC Maintenance</h3>
-        <p>
-          Regular maintenance to improve AC performance and
-          maintain better cooling.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- About -->
-  <section class="about" id="about">
-    <h2 class="section-title">About Us</h2>
+    <h1>
+        Reliable AC Service
+        <span>At Your Doorstep</span>
+    </h1>
 
     <p>
-      Vishnu Cooling Centre provides dependable air conditioning
-      services in Unnao, Uttar Pradesh. We focus on quality work,
-      professional service and customer satisfaction. Whether you
-      need AC servicing, repair, installation or maintenance,
-      our team is ready to help.
+        Vishnu Cooling Centre provides professional AC repair,
+        servicing, installation, maintenance and cooling solutions
+        for homes, offices and shops.
     </p>
-  </section>
 
+    <div class="hero-buttons">
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
-
-    <h2 class="section-title">Contact Us</h2>
-
-    <div class="contact-box">
-
-      <p><strong>🏪 Vishnu Cooling Centre</strong></p>
-
-      <p>📍 PD Nagar, Unnao, Uttar Pradesh 209801</p>
-
-      <p>📞 Call us for AC Service</p>
-
-      <div class="buttons">
-        <a class="btn call" href="tel:+91XXXXXXXXXX">
-          Call Now
+        <a href="tel:+91XXXXXXXXXX" class="btn btn-primary">
+            📞 Book AC Service
         </a>
 
-        <a class="btn whatsapp"
-           href="https://wa.me/91XXXXXXXXXX"
-           target="_blank">
-          WhatsApp Us
+        <a href="https://wa.me/91XXXXXXXXXX"
+           class="btn btn-secondary">
+            💬 WhatsApp Us
         </a>
-      </div>
 
     </div>
 
-  </section>
+</div>
+</section>
 
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Vishnu Cooling Centre. All Rights Reserved.</p>
-    <p>AC Service & Maintenance | Unnao</p>
-  </footer>
+<!-- ================= TRUST ================= -->
+
+<div class="trust">
+
+<div class="container trust-grid">
+
+    <div class="trust-box">
+        <strong>10+</strong>
+        <span>Years Experience</span>
+    </div>
+
+    <div class="trust-box">
+        <strong>1000+</strong>
+        <span>AC Services</span>
+    </div>
+
+    <div class="trust-box">
+        <strong>24/7</strong>
+        <span>Service Support</span>
+    </div>
+
+    <div class="trust-box">
+        <strong>100%</strong>
+        <span>Customer Care</span>
+    </div>
+
+</div>
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container about">
+
+    <div class="about-image">
+        <img src="service-1.png"
+             alt="Professional AC technician">
+    </div>
+
+    <div class="about-text">
+
+        <small style="color:#ef5b4d;font-weight:bold;">
+            ABOUT VISHNU COOLING CENTRE
+        </small>
+
+        <h2>
+            Your Comfort Is Our Priority
+        </h2>
+
+        <p>
+            Vishnu Cooling Centre is a trusted AC service provider
+            in PD Nagar, Unnao. We focus on reliable service,
+            professional workmanship and customer satisfaction.
+        </p>
+
+        <p>
+            Whether your AC needs servicing, repair, installation
+            or cooling-related maintenance, our team is ready to
+            help you keep your AC running efficiently.
+        </p>
+
+        <ul class="check-list">
+            <li>Professional AC technicians</li>
+            <li>Home & commercial AC service</li>
+            <li>Quality service and genuine work</li>
+            <li>Fast response in Unnao</li>
+        </ul>
+
+        <a href="#contact" class="btn btn-primary">
+            Contact Us
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+    <div class="section-heading">
+        <small>OUR SERVICES</small>
+
+        <h2>
+            Complete AC Solutions
+        </h2>
+
+        <p>
+            Professional AC services for homes, offices,
+            shops and commercial spaces.
+        </p>
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <img src="service-2.png" alt="AC Repair">
+            <div class="service-content">
+                <h3>AC Repair</h3>
+                <p>
+                    Expert diagnosis and repair for AC cooling
+                    and performance problems.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="service-3.png" alt="AC Installation">
+            <div class="service-content">
+                <h3>AC Installation</h3>
+                <p>
+                    Professional split AC installation with
+                    proper fitting and testing.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="service-4.png" alt="AC Cleaning">
+            <div class="service-content">
+                <h3>AC Cleaning</h3>
+                <p>
+                    Thorough AC cleaning to help maintain
+                    better airflow and cooling.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="service-5.png" alt="AC Servicing">
+            <div class="service-content">
+                <h3>AC Servicing</h3>
+                <p>
+                    Regular AC maintenance to keep your
+                    cooling system working efficiently.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="service-6.png" alt="AC Gas Charging">
+            <div class="service-content">
+                <h3>AC Gas Charging</h3>
+                <p>
+                    AC gas checking and charging service
+                    when required after proper diagnosis.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="service-7.png" alt="AC Maintenance">
+            <div class="service-content">
+                <h3>AC Maintenance</h3>
+                <p>
+                    Maintenance solutions for residential
+                    and commercial air conditioners.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<div class="container cta-box">
+
+    <div>
+        <h2>Need AC Service?</h2>
+        <p>
+            Call Vishnu Cooling Centre today for professional AC service.
+        </p>
+    </div>
+
+    <a href="tel:+91XXXXXXXXXX" class="btn">
+        📞 Call Now
+    </a>
+
+</div>
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+<div class="container">
+
+    <div class="section-heading">
+        <small>OUR WORK</small>
+
+        <h2>
+            AC Service Gallery
+        </h2>
+
+        <p>
+            A glimpse of AC installation, servicing and
+            professional cooling work.
+        </p>
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="hero.png" alt="Vishnu Cooling Centre Team">
+        </div>
+
+        <div class="gallery-item">
+            <img src="service-1.png" alt="AC technician">
+        </div>
+
+        <div class="gallery-item">
+            <img src="service-2.png" alt="AC repair">
+        </div>
+
+        <div class="gallery-item">
+            <img src="service-3.png" alt="AC installation">
+        </div>
+
+        <div class="gallery-item">
+            <img src="service-4.png" alt="AC cleaning">
+        </div>
+
+        <div class="gallery-item">
+            <img src="service-5.png" alt="AC service">
+        </div>
+
+        <div class="gallery-item">
+            <img src="service-6.png" alt="AC technician service">
+        </div>
+
+        <div class="gallery-item">
+            <img src="service-7.png" alt="Air conditioner maintenance">
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why">
+
+<div class="container">
+
+    <div class="section-heading">
+        <small>WHY CHOOSE US</small>
+
+        <h2>
+            Why Choose Vishnu Cooling Centre?
+        </h2>
+
+        <p>
+            We aim to provide dependable AC service with
+            professional workmanship and customer-first support.
+        </p>
+    </div>
+
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="why-icon">🔧</div>
+            <h3>Expert Technicians</h3>
+            <p>
+                Skilled technicians for AC service and repair.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <h3>Quick Service</h3>
+            <p>
+                Fast response for your AC service requirements.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🏠</div>
+            <h3>Doorstep Service</h3>
+            <p>
+                Convenient service at your home, office or shop.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">⭐</div>
+            <h3>Customer Focused</h3>
+            <p>
+                We value quality work and customer satisfaction.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-heading">
+        <small>CUSTOMER REVIEWS</small>
+
+        <h2>
+            What Our Customers Say
+        </h2>
+    </div>
+
+
+    <div class="review-grid">
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+                Very good service. The technician checked the AC
+                properly and explained the problem clearly.
+            </p>
+            <strong>— Happy Customer</strong>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+                Professional work and good behaviour.
+                Service was completed properly.
+            </p>
+            <strong>— Happy Customer</strong>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+                Good AC service in Unnao. Quick response and
+                professional service.
+            </p>
+            <strong>— Happy Customer</strong>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+    <div class="section-heading">
+        <small>CONTACT US</small>
+
+        <h2>
+            Book Your AC Service
+        </h2>
+
+        <p>
+            Contact Vishnu Cooling Centre for AC repair,
+            servicing and installation.
+        </p>
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <h3>Vishnu Cooling Centre</h3>
+
+            <div class="contact-info">
+                <strong>📍 Address</strong>
+                <span>
+                    PD Nagar, Unnao, Uttar Pradesh 209801
+                </span>
+            </div>
+
+            <div class="contact-info">
+                <strong>📞 Phone</strong>
+                <span>
+                    +91 XXXXXXXXXX
+                </span>
+            </div>
+
+            <div class="contact-info">
+                <strong>🕐 Service Hours</strong>
+                <span>
+                    Monday – Sunday | 8:00 AM – 8:00 PM
+                </span>
+            </div>
+
+            <div class="contact-actions">
+
+                <a href="tel:+91XXXXXXXXXX"
+                   class="btn call-btn">
+                    📞 Call Now
+                </a>
+
+                <a href="https://wa.me/91XXXXXXXXXX"
+                   class="btn whatsapp-btn">
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <iframe
+                class="map"
+                src="https://www.google.com/maps?q=PD%20Nagar%20Unnao%20Uttar%20Pradesh&output=embed"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+
+                <img src="logo.png"
+                     alt="Vishnu Cooling Centre">
+
+                <h3>
+                    Vishnu Cooling Centre
+                </h3>
+
+            </div>
+
+            <p>
+                Professional AC repair, servicing,
+                installation and maintenance solutions
+                in Unnao, Uttar Pradesh.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <div class="footer-links">
+                <a href="tel:+91XXXXXXXXXX">
+                    📞 +91 XXXXXXXXXX
+                </a>
+
+                <a href="https://wa.me/91XXXXXXXXXX">
+                    💬 WhatsApp
+                </a>
+
+                <a href="#contact">
+                    📍 PD Nagar, Unnao
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Vishnu Cooling Centre. All Rights Reserved.
+    </div>
+
+</div>
+</footer>
+
+
+<!-- ================= MOBILE BOTTOM BAR ================= -->
+
+<div class="mobile-bar">
+
+    <a href="tel:+91XXXXXXXXXX"
+       class="mobile-call">
+        📞 Call Now
+    </a>
+
+    <a href="https://wa.me/91XXXXXXXXXX"
+       class="mobile-whatsapp">
+        💬 WhatsApp
+    </a>
+
+</div>
+
 
 </body>
 </html>
