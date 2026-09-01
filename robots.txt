@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vishnucoolingcentre.github.io/Vishnu-cooling-centre/sitemap.xml
